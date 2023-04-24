@@ -16,15 +16,15 @@ const Display = ({ contract, account }) => {
       alert("You don't have access");
     }
     const isEmpty = Object.keys(dataArray).length === 0;
-
     if (!isEmpty) {
       const str = dataArray.toString();
       const str_array = str.split(",");
-      // console.log(str);
-      // console.log(str_array);
+      console.log(str);
+      console.log(str_array);
       const images = str_array.map((item, i) => {
         return (
-          <a href={item} key={i} target="_blank">
+          <a href={item} key={i} target="_blank"  rel="noreferrer" className="image123">
+            <h1>Image</h1>
             <img
               key={i}
               src={`https://gateway.pinata.cloud/ipfs/${item.substring(6)}`}
